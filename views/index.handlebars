@@ -8,11 +8,11 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/assets/js/burgers.js"></script>
 </head>
-<h1>Mjoc Dream Burger Tracking!</h1>
+<h1 class="nav" >Mjoc Dream Burger Tracking</h1>
 
 <h2>Burgers Available!</h2>
 
-<ul>
+<ul class="hideBullet">
   {{#each burgers}}
   {{#unless devour}}
   {{> burgers/burger-block devour=true}}
@@ -22,7 +22,7 @@
 
 <h2>Burgers Eaten!</h2>
 
-<ul>
+<ul class="hideBullet">
   {{#each burgers}}
   {{#if devour}}
   {{> burgers/burger-block devour=false}}
