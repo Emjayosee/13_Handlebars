@@ -5,17 +5,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   // UPDATE
-  const changeSleepBtns = document.querySelectorAll('.change-sleep');
+  const changeDevourBtns = document.querySelectorAll('.change-devour');
 
   // Set up the event listener for the create button
-  if (changeSleepBtns) {
+  if (changeDevourBtns) {
     changeDevourBtns.forEach((button) => {
       button.addEventListener('click', (e) => {
         // Grabs the id of the element that goes by the name, "id"
         const id = e.target.getAttribute('data-id');
-        const eaten = e.target.getAttribute('data-newsleep');
+        const eaten = e.target.getAttribute('data-newlyeaten');
 
-        const eaten = {
+        const newlyeaten = {
           devour: eaten,
         };
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           },
 
           // make sure to serialize the JSON body
-          body: JSON.stringify(eaten),
+          body: JSON.stringify(newlyeaten),
         }).then((response) => {
           // Check that the response is all good
           // Reload the page so the user can see the new quote
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
       // Grabs the value of the textarea that goes by the name, "quote"
       const newBurger = {
-        name: document.getElementById('ca').value.trim(),
+        burger_name: document.getElementById('bu').value.trim(),
         devour: document.getElementById('devour').checked,
       };
 
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         },
 
         // make sure to serialize the JSON body
-        body: JSON.stringify(eaten),
+        body: JSON.stringify(newBurger),
       }).then(() => {
         // Empty the form
         document.getElementById('ca').value = '';
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         method: 'DELETE',
       }).then((res) => {
         console.log(res);
-        console.log(`Deleted burger: ${id}`);
+        console.log(`Eaten burger: ${id}`);
 
         // Reload the page
         location.reload();

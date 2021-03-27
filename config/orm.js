@@ -25,8 +25,8 @@ const objToSql = (ob) => {
       if (typeof value === 'string' && value.indexOf(' ') >= 0) {
         value = `'${value}'`;
       }
-      // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-      // e.g. {sleepy: true} => ["sleepy=true"]
+      // e.g. {burger_name: 'Dream Burger'} => ["bubrger_name='Dream Burger'"]
+      // e.g. {devour: true} => ["devour=true"]
       arr.push(`${key}=${value}`);
     }
   }
@@ -66,7 +66,7 @@ const orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
+  // An example of objColVals would be {name: GAAR Burger, devour: true}
   update(table, objColVals, condition, cb) {
     let queryString = `UPDATE ${table}`;
 
