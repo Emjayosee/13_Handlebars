@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           // make sure to serialize the JSON body
           body: JSON.stringify(newlyeaten),
         }).then((response) => {
+          console.log
           // Check that the response is all good
           // Reload the page so the user can see the new quote
           if (response.ok) {
