@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
       // Grabs the value of the textarea that goes by the name, "quote"
       const newBurger = {
-        burger_name: document.getElementById('bu').value.trim(),
-        devour: document.getElementById('devour').checked,
+        burger_name: document.getElementById('bun').value.trim(),
+        devoured: document.getElementById('devoured').checked,
       };
 
       // Send POST request to create a new quote
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         body: JSON.stringify(newBurger),
       }).then(() => {
         // Empty the form
-        document.getElementById('ca').value = '';
+        document.getElementById('bun').value = '';
 
         // Reload the page so the user can see the new quote
         console.log('Created a new burger!');
