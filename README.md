@@ -62,7 +62,7 @@ Submitted: March 27, 2021, Michael O'Connor, 604 765-6061
 
 The following lessons learned:
 
-    1. What an endpint is.
+    1. What an endpoint is.
 
     2. How Heroku and JAWSDB fit with Github and MySQL Workbench.
 
@@ -74,14 +74,14 @@ The following lessons learned:
 
 The following items should be considered for future enhancements, time and budget permitting:
 
-    1. Add a delet button.
+    1. Add a delete button.
 
-    2. Remove the two bullet radio buttons.
+    2. Remove the two bullet radio buttons at bottom.
 
-    3. Ad a sticky nav bar and some instructions.
+    3. Add a sticky nav bar and some instructions.
 
 # 06 Current Renderings:
 
 See Current Rendering at the time of writing in the Assignment19 Repo. 
-![alt text](public/Assets/Rendering.png)
+![alt text](public/assets/Rendering.png)
 
